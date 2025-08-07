@@ -139,6 +139,7 @@
             margin-bottom: 30px;
             background: linear-gradient(90deg, var(--accent) 0%, #ffffff 100%);
             -webkit-background-clip: text;
+           background-clip: text; 
             -webkit-text-fill-color: transparent;
             opacity: 0;
             transform: translateY(20px);
@@ -309,8 +310,8 @@
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap: clamp(20px, 3vw, 40px);
         }
         
         .feature-card {
@@ -695,7 +696,7 @@
                 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-volume"></i>
+                        <i class="fas fa-volume-up"></i>
                     </div>
                     <h3>Dynamic Range</h3>
                     <p>Measure the difference between the quietest and loudest sounds your system can produce.</p>
